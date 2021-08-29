@@ -1,0 +1,88 @@
+
+    <div class="container" style="display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;">
+   <div style="background-color: white;
+   margin-top: 5%;
+   border-radius: 1rem;
+   padding: 0;
+   width: 50vw;">
+    <div class="header-class">
+      <div class="row">
+        <div class="col-3 text-right">
+          <img src="./assets/brayan.jpg" class="img-class">
+        </div>
+        <div class="col-8 pl-0" style=" margin-top: 1vw;
+        color: white;">
+          <h4 style="font-size: 1.5vw; margin-bottom: 1vw;
+          font-weight: 500;
+          line-height: 1.2;">
+            Brayan Jakes Inojosa Infante
+          </h4>
+          <h6 style="font-size: 1vw; margin-bottom: 1vw;
+          font-weight: 500;
+          line-height: 1.2;">
+            Desarrollador Web
+          </h6>
+          <div>
+            <img src="./assets/angular.png" matTooltip="Angular v12" style="width: 2vw; border-radius: 10%;
+            margin-right: 0.5rem;">
+            <img src="./assets/angular-material.png" matTooltip="Angular material" style="width: 2vw; border-radius: 10%;
+            margin-right: 0.5rem;">
+            <img src="./assets/nodejs.png" matTooltip="NodeJs" style="width: 2vw; border-radius: 10%;
+            margin-right: 0.3rem;">
+            <img src="./assets/mongodb.png" matTooltip="Base de datos MongoDB" style="width: 2vw; border-radius: 10%;
+            margin-right: 0.3rem;">
+            <img src="./assets/mysql.png" matTooltip="Base de datos MySql" style="width: 2vw; border-radius: 10%;
+            margin-right: 0.5rem;">
+          </div>
+
+          <mat-icon class="text-white" style="font-size: 2vw;
+          position: absolute;
+          cursor: pointer;
+          right: -2vw;
+          top: 0;"
+          matTooltip="Información Personal"
+          (click)="verPerfil()"
+          >assignmentind</mat-icon>
+        </div>
+      </div>
+      
+      
+    </div>
+    <div class="text-center separador-class">
+      Aplicaciones realizadas
+    </div>
+
+    <mat-tab-group mat-align-tabs="center">
+      <mat-tab >
+        <ng-template mat-tab-label>
+          <span style="font-size: 1vw;">De practica</span>
+        </ng-template>
+        <div class="text-center" style="margin-top: 5%; margin-bottom: 5%;">
+          <img src="./assets/img/1.png" (click)="abrirModal(0)" matTooltip="Modulo de Facturación" class="img-proyecto" style="margin-right: 2rem; cursor: pointer;">
+          <img src="./assets/img/6.png" (click)="abrirModal(1)" matTooltip="Mini red Social" class="img-proyecto" style=" cursor: pointer;">
+        </div>
+      </mat-tab>
+      <mat-tab>
+        <ng-template mat-tab-label>
+          <span style="font-size: 1vw;">Para empresas</span>
+        </ng-template>
+        <div class="text-center" style="margin-top: 5%; margin-bottom: 5%;">
+          <img src="./assets/img/superadmin.png" (click)="abrirModal(2)" matTooltip="Modulo de Administración y CRM" class="img-proyecto" style="margin-right: 2rem; cursor: pointer;">
+          <img src="./assets/img/chatbot.png" (click)="abrirModal(3)" matTooltip="CRM Chatbot" class="img-proyecto" style=" cursor: pointer;">
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+   </div>
+
+   
+   <a href="https://www.facebook.com/BriianJakess" target="_blank">
+    <img src="./assets/fb.png" class="img-ws" style="margin-bottom: 7vw;">
+   </a>
+   <a href="https://api.whatsapp.com/send?phone=584128797171&text=Saludos" target="_blank">
+    <img src="./assets/ws.png" class="img-ws">
+   </a>
+  </div>
+

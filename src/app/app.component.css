@@ -1,0 +1,46 @@
+::ng-deep .mat-tooltip {
+    /* your own custom styles here */
+    /* e.g. */
+    background-color: black !important;
+    font-size: 0.9rem;
+}
+
+.img-class{
+    width: 9vw;
+    height: 10vw;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2rem solid rgb(10 12 123);
+}
+
+.header-class{
+    padding: 1vw;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    background-color: #00d4ff;
+}
+
+.separador-class{
+    background-color: rgb(10 12 123);
+    color: white;
+    font-weight: 500;
+    font-size: 1.3vw;
+    padding: 0.6vw;
+}
+
+.img-proyecto{
+    width: 15vw;
+    border-radius: 0.5rem;
+    height: 11vw;
+    object-fit: cover;
+}
+
+.img-ws{
+    width: 6vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+}
+

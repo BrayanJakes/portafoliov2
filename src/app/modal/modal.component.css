@@ -1,0 +1,26 @@
+.separador-class{
+    background-color: rgb(10 12 123);
+    color: white;
+    font-weight: 500;
+    font-size: 1.3vw;
+    padding: 0.6vw;
+}
+
+::ng-deep mat-dialog-container{
+    padding: 0 !important;    
+    border-radius: 1rem !important;
+}
+
+
+
+.img-proyecto{
+    width: 10vw;
+    border-radius: 0.5rem;
+    /* height: 8vw; */
+    object-fit: cover;
+}
+
+.pof{
+    font-size: 1vw;
+    line-height: 1.2;
+}
