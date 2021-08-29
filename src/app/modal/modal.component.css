@@ -16,6 +16,14 @@
 .img-proyecto{
     width: 10vw;
     border-radius: 0.5rem;
+    height: 8vw;
+    object-fit: cover;
+}
+
+.img-proyecto2{
+    width: 18vw;
+    height: 15vw;
+    border-radius: 0.5rem;
     /* height: 8vw; */
     object-fit: cover;
 }

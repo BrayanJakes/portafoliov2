@@ -7,42 +7,50 @@
    margin-top: 5%;
    border-radius: 1rem;
    padding: 0;
-   width: 50vw;">
+   width: 50vw;" [style.width]="responsive.responsiveStatus !== 1 ? '50vw' : '80vw'">
     <div class="header-class">
       <div class="row">
         <div class="col-3 text-right">
-          <img src="./assets/brayan.jpg" class="img-class">
+          <img src="./assets/brayan.jpg" [class.img-class]="responsive.responsiveStatus !== 1" [class.img-class2]="responsive.responsiveStatus === 1">
         </div>
         <div class="col-8 pl-0" style=" margin-top: 1vw;
         color: white;">
-          <h4 style="font-size: 1.5vw; margin-bottom: 1vw;
+          <h4 style="margin-bottom: 1vw;
           font-weight: 500;
-          line-height: 1.2;">
+          line-height: 1.2;"
+          [style.font-size]="responsive.responsiveStatus !== 1 ? '1.5vw' : '3vw'"
+          >
             Brayan Jakes Inojosa Infante
           </h4>
-          <h6 style="font-size: 1vw; margin-bottom: 1vw;
+          <h6 style=" margin-bottom: 1vw;
           font-weight: 500;
-          line-height: 1.2;">
+          line-height: 1.2;"
+          [style.font-size]="responsive.responsiveStatus !== 1 ? '1vw' : '2vw'"
+          >
             Desarrollador Web
           </h6>
           <div>
-            <img src="./assets/angular.png" matTooltip="Angular v12" style="width: 2vw; border-radius: 10%;
-            margin-right: 0.5rem;">
-            <img src="./assets/angular-material.png" matTooltip="Angular material" style="width: 2vw; border-radius: 10%;
-            margin-right: 0.5rem;">
-            <img src="./assets/nodejs.png" matTooltip="NodeJs" style="width: 2vw; border-radius: 10%;
-            margin-right: 0.3rem;">
-            <img src="./assets/mongodb.png" matTooltip="Base de datos MongoDB" style="width: 2vw; border-radius: 10%;
-            margin-right: 0.3rem;">
-            <img src="./assets/mysql.png" matTooltip="Base de datos MySql" style="width: 2vw; border-radius: 10%;
-            margin-right: 0.5rem;">
+            <img src="./assets/angular.png" matTooltip="Angular v12" style="border-radius: 10%;
+            margin-right: 0.5rem;"
+            [style.width]="responsive.responsiveStatus !== 1 ? '2vw' : '4vw'">
+            <img src="./assets/angular-material.png" matTooltip="Angular material" style=" border-radius: 10%;
+            margin-right: 0.5rem;"
+            [style.width]="responsive.responsiveStatus !== 1 ? '2vw' : '4vw'">
+            <img src="./assets/nodejs.png" matTooltip="NodeJs" style=" border-radius: 10%;
+            margin-right: 0.3rem;"
+            [style.width]="responsive.responsiveStatus !== 1 ? '2vw' : '4vw'">
+            <img src="./assets/mongodb.png" matTooltip="Base de datos MongoDB" style="border-radius: 10%;
+            margin-right: 0.3rem;" [style.width]="responsive.responsiveStatus !== 1 ? '2vw' : '4vw'">
+            <img src="./assets/mysql.png" matTooltip="Base de datos MySql" style="border-radius: 10%;
+            margin-right: 0.5rem;" [style.width]="responsive.responsiveStatus !== 1 ? '2vw' : '4vw'">
           </div>
 
-          <mat-icon class="text-white" style="font-size: 2vw;
+          <mat-icon class="text-white" style="
           position: absolute;
           cursor: pointer;
           right: -2vw;
           top: 0;"
+          [style.font-size]="responsive.responsiveStatus !== 1 ? '2vw' : '4vw'"
           matTooltip="Información Personal"
           (click)="verPerfil()"
           >assignmentind</mat-icon>
@@ -51,27 +59,35 @@
       
       
     </div>
-    <div class="text-center separador-class">
+    <div class="text-center separador-class" [style.font-size]="responsive.responsiveStatus !== 1 ? '1.3vw' : '2.3vw'">
       Aplicaciones realizadas
     </div>
 
     <mat-tab-group mat-align-tabs="center">
       <mat-tab >
         <ng-template mat-tab-label>
-          <span style="font-size: 1vw;">De practica</span>
+          <span [style.font-size]="responsive.responsiveStatus !== 1 ? '1vw' : '2vw'">De practica</span>
         </ng-template>
         <div class="text-center" style="margin-top: 5%; margin-bottom: 5%;">
-          <img src="./assets/img/1.png" (click)="abrirModal(0)" matTooltip="Modulo de Facturación" class="img-proyecto" style="margin-right: 2rem; cursor: pointer;">
-          <img src="./assets/img/6.png" (click)="abrirModal(1)" matTooltip="Mini red Social" class="img-proyecto" style=" cursor: pointer;">
+          <img src="./assets/img/1.png" (click)="abrirModal(0)" matTooltip="Modulo de Facturación"
+          [class.img-proyecto]="responsive.responsiveStatus !== 1" [class.img-proyecto2]="responsive.responsiveStatus === 1"
+           style="margin-right: 2rem; cursor: pointer;">
+          <img src="./assets/img/6.png" 
+          [class.img-proyecto]="responsive.responsiveStatus !== 1" [class.img-proyecto2]="responsive.responsiveStatus === 1"
+          (click)="abrirModal(1)" matTooltip="Mini red Social"  style=" cursor: pointer;">
         </div>
       </mat-tab>
       <mat-tab>
         <ng-template mat-tab-label>
-          <span style="font-size: 1vw;">Para empresas</span>
+          <span [style.font-size]="responsive.responsiveStatus !== 1 ? '1vw' : '2vw'">Para empresas</span>
         </ng-template>
         <div class="text-center" style="margin-top: 5%; margin-bottom: 5%;">
-          <img src="./assets/img/superadmin.png" (click)="abrirModal(2)" matTooltip="Modulo de Administración y CRM" class="img-proyecto" style="margin-right: 2rem; cursor: pointer;">
-          <img src="./assets/img/chatbot.png" (click)="abrirModal(3)" matTooltip="CRM Chatbot" class="img-proyecto" style=" cursor: pointer;">
+          <img src="./assets/img/superadmin.png"
+          [class.img-proyecto]="responsive.responsiveStatus !== 1" [class.img-proyecto2]="responsive.responsiveStatus === 1"
+          (click)="abrirModal(2)" matTooltip="Modulo de Administración y CRM" style="margin-right: 2rem; cursor: pointer;">
+          <img src="./assets/img/chatbot.png"
+          [class.img-proyecto]="responsive.responsiveStatus !== 1" [class.img-proyecto2]="responsive.responsiveStatus === 1"
+          (click)="abrirModal(3)" matTooltip="CRM Chatbot" style=" cursor: pointer;">
         </div>
       </mat-tab>
     </mat-tab-group>
@@ -79,10 +95,15 @@
 
    
    <a href="https://www.facebook.com/BriianJakess" target="_blank">
-    <img src="./assets/fb.png" class="img-ws" style="margin-bottom: 7vw;">
+    <img src="./assets/fb.png"
+    [style.margin-bottom]="responsive.responsiveStatus !== 1 ? '7vw' : '14vw'"
+    [class.img-ws]="responsive.responsiveStatus !== 1" [class.img-ws2]="responsive.responsiveStatus === 1"
+    >
    </a>
    <a href="https://api.whatsapp.com/send?phone=584128797171&text=Saludos" target="_blank">
-    <img src="./assets/ws.png" class="img-ws">
+    <img src="./assets/ws.png"
+    [class.img-ws]="responsive.responsiveStatus !== 1" [class.img-ws2]="responsive.responsiveStatus === 1"
+    >
    </a>
   </div>
 

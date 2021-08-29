@@ -35,6 +35,13 @@
     object-fit: cover;
 }
 
+.img-proyecto2{
+    width: 25vw;
+    border-radius: 0.5rem;
+    height: 21vw;
+    object-fit: cover;
+}
+
 .img-ws{
     width: 6vw;
     position: absolute;
@@ -42,5 +49,23 @@
     right: 0;
     margin-bottom: 1vw;
     margin-right: 1vw;
+}
+
+.img-ws2{
+    width: 14vw;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 1vw;
+    margin-right: 1vw;
+}
+
+.img-class2 {
+    width: 14vw;
+    height: 15vw;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.2rem solid rgb(10 12 123);
+
 }
 

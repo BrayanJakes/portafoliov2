@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject} from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ModalimgComponent } from '../modalimg/modalimg.component';
+import { ResponsiveService } from '../responsive.service';
 
 @Component({
   selector: 'app-modal',
@@ -13,7 +14,8 @@ export class ModalComponent implements OnInit {
 
   constructor(public dialogRef: MatDialogRef<ModalComponent>,
               @Inject(MAT_DIALOG_DATA) public data: any,
-              private modal: MatDialog) { }
+              private modal: MatDialog,
+              public responsive: ResponsiveService) { }
 
   ngOnInit(): void {
     this.value = this.data.value

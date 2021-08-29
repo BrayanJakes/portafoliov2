@@ -1,1 +1,3 @@
-<img [src]="img" style="width: 55vw;">
+<img [src]="img"
+[style.width]="responsive.responsiveStatus !== 1 ? '55vw' : '80vw'"
+>

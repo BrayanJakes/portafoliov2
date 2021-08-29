@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from './modal/modal.component';
 import { PerfilComponent } from './perfil/perfil.component';
+import { ResponsiveService } from './responsive.service';
 
 
 @Component({
@@ -12,18 +13,19 @@ import { PerfilComponent } from './perfil/perfil.component';
 export class AppComponent {
   title = 'portafolio';
 
-  constructor(private modal: MatDialog){}
+  constructor(private modal: MatDialog,
+              public responsive: ResponsiveService){}
 
   abrirModal(val: number){
     this.modal.open(ModalComponent, {
       data: {value: val},
-      width: '47vw'
+      width: this.responsive.responsiveStatus !== 1 ? '47vw' : '94vw'
     })
   }
 
   verPerfil(){
     this.modal.open(PerfilComponent,{
-      width: '47vw'
+      width: this.responsive.responsiveStatus !== 1 ? '47vw' : '94vw'
     })
   }
 
